@@ -1,13 +1,20 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { formatDate, formatTime } from "../utils/eventHelpers";
 
 function EventCard({ event }) {
+    const [imgFailed, setImgFailed] = useState(false);
     const location = [event.venueName, event.city].filter(Boolean).join(", ");
 
     return (
         <Link to={`/events/${event.id}`} className="event-card">
-            {event.image ? (
-                <img src={event.image} alt={event.name} loading="lazy" />
+            {event.image && !imgFailed ? (
+                <img
+                    src={event.image}
+                    alt={event.name}
+                    loading="lazy"
+                    onError={() => setImgFailed(true)}
+                />
             ) : (
                 <div className="no-image">No image</div>
             )}

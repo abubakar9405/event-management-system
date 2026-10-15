@@ -4,6 +4,8 @@ import { loadEvents } from "../features/events/eventsSlice";
 import EventCard from "../components/EventCard";
 import Loader from "../components/Loader";
 import ErrorMessage from "../components/ErrorMessage";
+import SearchBar from "../components/SearchBar";
+import FilterBar from "../components/FilterBar";
 
 function Events() {
     const dispatch = useDispatch();
@@ -23,6 +25,9 @@ function Events() {
     return (
         <div className="container">
             <h1>Explore Events</h1>
+
+            <SearchBar />
+            <FilterBar />
 
             {loading && <Loader />}
 
