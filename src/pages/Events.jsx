@@ -5,6 +5,7 @@ import EventCard from "../components/EventCard";
 import Loader from "../components/Loader";
 import ErrorMessage from "../components/ErrorMessage";
 import SearchBar from "../components/SearchBar";
+import CategoryChips from "../components/CategoryChips";
 import FilterBar from "../components/FilterBar";
 
 function Events() {
@@ -27,6 +28,7 @@ function Events() {
             <h1>Explore Events</h1>
 
             <SearchBar />
+            <CategoryChips />
             <FilterBar />
 
             {loading && <Loader />}

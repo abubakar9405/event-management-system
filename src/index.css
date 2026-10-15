@@ -316,3 +316,25 @@ a {
   border-radius: 8px;
   font-size: 0.95rem;
 }
+
+.chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.chip {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--primary);
+  background: #fff;
+  color: var(--primary);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.chip.active {
+  background: var(--primary);
+  color: #fff;
+}
