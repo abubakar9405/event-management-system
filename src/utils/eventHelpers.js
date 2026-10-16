@@ -60,3 +60,10 @@ export function formatPrice(event) {
     }
     return `${cur} ${event.priceMin}`;
 }
+// true if the event date is before today
+export function isPastEvent(localDate) {
+    if (!localDate) return false;
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    return new Date(`${localDate}T00:00:00`) < today;
+}
