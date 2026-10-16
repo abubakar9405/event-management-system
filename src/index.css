@@ -407,3 +407,27 @@ a {
 .btn-danger:hover {
   background: #b91c1c;
 }
+
+.section-title {
+  margin: 28px 0 14px;
+}
+
+.my-event {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.my-event .btn {
+  width: 100%;
+}
+
+.completed .event-card {
+  opacity: 0.75;
+}
+
+.badge-done {
+  background: #e5e7eb;
+  color: var(--muted);
+  align-self: center;
+}
